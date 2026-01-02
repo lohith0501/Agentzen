@@ -1,5 +1,0 @@
-{"name":"request","span_id":"1","parent_id":null,"trace_id":"abc","start_time":0.0,"end_time":2.0,"output":null,"error":null,"attributes":{}}
-{"name":"agent:plan","span_id":"2","parent_id":"1","trace_id":"abc","start_time":0.1,"end_time":0.5,"output":"Plan route","error":null,"attributes":{}}
-{"name":"llm:call","span_id":"3","parent_id":"1","trace_id":"abc","start_time":0.6,"end_time":1.9,"output":{"model":"gpt-3.5-turbo","token_usage":{"prompt_tokens":100,"completion_tokens":20,"total_tokens":120},"text":"Answer"},"error":null,"attributes":{}}
-{"name":"tool:search","span_id":"4","parent_id":"1","trace_id":"abc","start_time":1.0,"end_time":1.2,"output":null,"error":{"type":"TOOL_TIMEOUT","retryable":true},"attributes":{}}
-{"name":"tool:search","span_id":"4","parent_id":"1","trace_id":"abc","start_time":1.0,"end_time":1.2,"output":null,"error":{"type":"TOOL_TIMEOUT","retryable":true},"attributes":{}}
