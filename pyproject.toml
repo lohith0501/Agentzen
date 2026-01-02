@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "agentzen"
+version = "0.1.0"
+description = "Agent observability, tracing, and evaluation toolkit for agentic AI systems"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+
+authors = [
+  { name = "Your Name", email = "you@example.com" }
+]
+
+dependencies = [
+  # Core has no hard deps
+]
+
+keywords = [
+  "agentic-ai",
+  "llm",
+  "observability",
+  "tracing",
+  "langchain",
+  "ai-agents"
+]
+
+
+[project.optional-dependencies]
+langchain = [
+  "langchain>=0.1.0",
+  "langchain-openai>=0.1.0",
+  "openai>=1.0.0",
+]
+
+
+[project.scripts]
+agentzen = "agentzen.cli.trace:main"
+
+
+# ---------------------------------------------------------------------
+# Setuptools package discovery
+# ---------------------------------------------------------------------
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agentzen*"]
+exclude = ["tests*", "examples*"]
